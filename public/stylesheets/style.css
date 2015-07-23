@@ -58,6 +58,10 @@ h1, h2, h3, h4, h5, h6 {
 .errormsg {
   color: #F00; }
 
+#delete {
+  background-color: #F00;
+  color: #FFF; }
+
 body, button {
   font-family: 'Lato', sans-serif;
   line-height: 1;
