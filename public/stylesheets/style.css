@@ -112,6 +112,10 @@ a:hover {
 .pageBanner a:hover {
   text-decoration: none; }
 
+.banner {
+  font-weight: bold;
+  text-shadow: 1px 1px 1px black; }
+
 strong {
   font-weight: bold; }
 
@@ -195,4 +199,5 @@ form {
   form #dark {
     width: auto; }
   form #delete, form #submit {
-    width: 20%; }
+    width: auto;
+    padding: 5px; }

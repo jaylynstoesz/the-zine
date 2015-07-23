@@ -9,12 +9,21 @@ block content
       h3 #{pageTitle}
   for article in allArticles
     .content
-      .banner(style="background-image: url(" + article.url + ")")
-        if article.dark === "on"
-          a(href="/article/" + article._id)
-            h5(style="color: white") #{article.title}
-        else
-          a(href="/article/" + article._id)
-            h5(style="color: black") #{article.title}      
+      if article.url
+        .banner(style="background-image: url(" + article.url + ")")
+          if article.dark === "on"
+            a(href="/article/" + article._id)
+              h5(style="color: white") #{article.title}
+          else
+            a(href="/article/" + article._id)
+              h5(style="color: black") #{article.title}      
+      else
+        .banner(style="background-color: silver")
+          if article.dark === "on"
+            a(href="/article/" + article._id)
+              h5(style="color: white") #{article.title}
+          else
+            a(href="/article/" + article._id)
+              h5(style="color: black") #{article.title}      
       .tile
         p= article.excerpt

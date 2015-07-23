@@ -8,13 +8,21 @@ block content
     a(href="/") 
       h3 #{pageTitle}
   .content
-    .banner(style="background-image: url(" + theArticle.url + ")")
-      if theArticle.dark === "on"
-        h5(style="color: white") #{theArticle.title}
-      else
-        h5(style="color: black") #{theArticle.title}      
+    if theArticle.url
+      .banner(style="background-image: url(" + theArticle.url + ")")
+        if theArticle.dark === "on"
+          h5(style="color: white") #{theArticle.title}
+        else
+          h5(style="color: black") #{theArticle.title}
+    else
+      .banner(style="background-color: silver")
+        if theArticle.dark === "on"
+          h5(style="color: white") #{theArticle.title}
+        else
+          h5(style="color: black") #{theArticle.title}
     .tile
       p= theArticle.body
     .tile
       a(href="/article/" + theArticle._id + "/edit") Edit this article
+
     
