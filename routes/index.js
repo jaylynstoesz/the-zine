@@ -11,6 +11,10 @@ router.get('/', function(req, res, next) {
   });
 });
 
+router.get('/styleguide', function(req, res, next) {
+  res.render('styleguide', {pageTitle: 'The Zine'});
+});
+
 // create new article
 router.get('/new-article', function(req, res, next) {
   res.render('new-article', {pageTitle: 'The Zine'});

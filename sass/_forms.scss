@@ -1,0 +1,22 @@
+form {
+  display: inline-block;
+  width: 90%;
+
+  .field {
+    height: auto;
+    padding: 10px;
+    margin: 10px;
+  }
+
+  label {
+    width: 40%;
+    display: inline-block;
+  }
+  input {
+    width: 50%;
+    display: inline-block;
+  }
+  .checkbox label {
+    text-align: left;
+  }
+}

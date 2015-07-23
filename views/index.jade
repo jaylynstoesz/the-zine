@@ -3,9 +3,10 @@ extends layout
 block content
   .nav
     a(href="/") #{pageTitle}
-  a(href="/new-article") Post a new article
+  a(href="/new-article") 
+    p Post a new article
   for article in allArticles
     div
       a(href="/article/" + article._id)
-        h3= article.title
+        h5= article.title
       p= article.excerpt

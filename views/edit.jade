@@ -3,32 +3,33 @@ extends layout
 block content
   .nav
     a(href="/") #{pageTitle}
-  h1 Edit this article
-  form(method="post" action="/article/" +  theArticle._id)
-    .field
-      label(for="title") Title 
-      input(type="text" name="title" id="title" value=theArticle.title)
-    .field
-      label(for="url") Background Url 
-      input(type="text" name="url" id="url" value=theArticle.url)
-    .field
-      input(type="checkbox" name="dark" id="dark" checked=theArticle.dark)
-      label(for="dark") Background image has dark colors
-    .field
-      label(for="excerpt") Excerpt
-      br
-      textarea(name="excerpt" id="excerpt" rows="10" cols="50") #{theArticle.excerpt}
-    .field
-      label(for="body") Body
-      br
-      textarea(name="body" id="body" rows="10" cols="50") #{theArticle.body}
-    .field
-      input(type="submit" value="Update Article")
-  form(method="post" action="/delete/" + theArticle._id)
-    .field
-      input(type="submit" id="delete" name="delete" value="Delete this article")
-  div
-    if errors
-      p Please correct the errors below:
-      for each in errors
-        p.errormsg= each
+  .content
+    h1 Edit this article
+    form(method="post" action="/article/" +  theArticle._id)
+      .field
+        label(for="title") Title 
+        input(type="text" name="title" id="title" value=theArticle.title)
+      .field
+        label(for="url") Background Url 
+        input(type="text" name="url" id="url" value=theArticle.url)
+      .field
+        input(type="checkbox" name="dark" id="dark" checked=theArticle.dark)
+        label(for="dark") Background image has dark colors
+      .field
+        label(for="excerpt") Excerpt
+        br
+        textarea(name="excerpt" id="excerpt" rows="10" cols="50") #{theArticle.excerpt}
+      .field
+        label(for="body") Body
+        br
+        textarea(name="body" id="body" rows="10" cols="50") #{theArticle.body}
+      .field
+        input(type="submit" value="Update Article")
+    form(method="post" action="/delete/" + theArticle._id)
+      .field
+        input(type="submit" id="delete" name="delete" value="Delete this article")
+    div
+      if errors
+        p Please correct the errors below:
+        for each in errors
+          p.errormsg= each
