@@ -2,9 +2,18 @@ extends layout
 
 block content
   .nav
-    a(href="/") #{pageTitle}
-  h1= theArticle.title
-  p= theArticle.excerpt
-  p= theArticle.body
-  a(href="/article/" + theArticle._id + "/edit") Edit this article
-  
+    a(href="/new-article") Post a new article
+    a(href="/") Home
+  .pageBanner
+    a(href="/") 
+      h3 #{pageTitle}
+  .content
+    .banner(style="background-image: url(" + theArticle.url + ")")
+      h3= theArticle.title
+    .tile
+      p= theArticle.excerpt
+    .tile
+      p= theArticle.body
+    .tile
+      a(href="/article/" + theArticle._id + "/edit") Edit this article
+    

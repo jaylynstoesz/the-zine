@@ -7,11 +7,20 @@ $slightlyDarkerBlack: #000;
 $tertiary: #FED0BB;
 // light blue
 $white: #FFF;
+$red: #F00;
 
-body {
-  background-color: $slightlyDarkerBlack;
+.content, .pageBanner {
+  background-color: $white;
 }
 
-.content, .nav {
+h1, h2, h3, h4, h5, h6 {
+  color: $slightlyDarkerBlack;
+}
+
+.nav {
   background-color: $white;
+}
+
+.errormsg {
+  color: $red;
 }

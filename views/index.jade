@@ -2,11 +2,15 @@ extends layout
 
 block content
   .nav
-    a(href="/") #{pageTitle}
-  a(href="/new-article") 
-    p Post a new article
+    a(href="/new-article") Post a new article
+    a(href="/") Home
+  .pageBanner
+    a(href="/") 
+      h3 #{pageTitle}
   for article in allArticles
-    div
-      a(href="/article/" + article._id)
-        h5= article.title
-      p= article.excerpt
+    .content
+      .banner(style="background-image: url(" + article.url + ")")
+        a(href="/article/" + article._id)
+          h5= article.title
+      .tile
+        p= article.excerpt

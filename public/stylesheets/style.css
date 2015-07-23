@@ -47,11 +47,17 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-body {
-  background-color: #000; }
-
-.content, .nav {
+.content, .pageBanner {
   background-color: #FFF; }
+
+h1, h2, h3, h4, h5, h6 {
+  color: #000; }
+
+.nav {
+  background-color: #FFF; }
+
+.errormsg {
+  color: #F00; }
 
 body, button {
   font-family: 'Lato', sans-serif;
@@ -64,22 +70,22 @@ h1, h2, h3, h4, h5, h6 {
   padding: 5px; }
 
 h1 {
-  font-size: 6em; }
-
-h2 {
   font-size: 5em; }
 
-h3 {
+h2 {
   font-size: 4em; }
 
-h4 {
+h3 {
   font-size: 3em; }
 
-h5 {
+h4 {
   font-size: 2em; }
 
-h6 {
+h5 {
   font-size: 1.5em; }
+
+h6 {
+  font-size: 1em; }
 
 h1, h2, h3, h4 {
   margin: 1.2em 0 0.5em;
@@ -100,7 +106,7 @@ a {
 a:hover {
   text-decoration: underline; }
 
-.nav a:hover {
+.pageBanner a:hover {
   text-decoration: none; }
 
 strong {
@@ -112,23 +118,68 @@ em {
 label {
   font-size: 15px; }
 
-.content, .nav {
-  width: 80%;
-  padding: 5%;
-  margin: 5%; }
+body {
+  background-image: url(https://raw.githubusercontent.com/gSchool/express-crud-assessment/master/congruent_outline.png?token=ALV2BtnB2ZDwEgv0yjJIK8CYCiVZPaPcks5VunHcwA%3D%3D);
+  background-size: 100%;
+  background-repeat: no-repeat; }
+
+.content, .pageBanner {
+  width: 70%;
+  margin-top: 2.5%;
+  margin-bottom: 2.5%;
+  margin-left: auto;
+  margin-right: auto; }
+
+.nav {
+  display: inline-block;
+  padding: 10px;
+  width: 99%;
+  text-align: right; }
+  .nav a {
+    padding: 10px; }
+
+.pageBanner {
+  background-image: url(https://unsplash.imgix.net/photo-1429198739803-7db875882052?dpr=2&fit=crop&fm=jpg&h=1575&q=75&w=1050);
+  text-align: right; }
+
+.banner {
+  height: auto;
+  padding: 5px; }
+  .banner h3 {
+    padding: 5px;
+    margin: 5px; }
+
+.tile {
+  height: auto;
+  padding: 10px;
+  margin-top: 10px; }
 
 form {
   display: inline-block;
-  width: 90%; }
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto; }
   form .field {
     height: auto;
     padding: 10px;
     margin: 10px; }
-  form label {
-    width: 40%;
-    display: inline-block; }
-  form input {
+  form .left {
     width: 50%;
+    height: auto;
     display: inline-block; }
-  form .checkbox label {
+  form .right {
+    width: 50%;
+    height: auto;
+    display: inline-block; }
+  form label {
+    display: inline-block;
+    padding: 10px; }
+  form input, form textarea {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block; }
+  form .checkbox {
     text-align: left; }
+  form #dark {
+    width: auto; }

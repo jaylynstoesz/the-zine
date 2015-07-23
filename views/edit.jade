@@ -2,27 +2,38 @@ extends layout
 
 block content
   .nav
-    a(href="/") #{pageTitle}
+    a(href="/new-article") Post a new article
+    a(href="/") Home
+  .pageBanner
+    a(href="/") 
+      h3 #{pageTitle}
   .content
     h1 Edit this article
     form(method="post" action="/article/" +  theArticle._id)
       .field
-        label(for="title") Title 
-        input(type="text" name="title" id="title" value=theArticle.title)
+        .left
+          label(for="title") Title 
+        .right
+          input(type="text" name="title" id="title" value=theArticle.title)
       .field
-        label(for="url") Background Url 
-        input(type="text" name="url" id="url" value=theArticle.url)
+        .left
+          label(for="url") Background Url 
+        .right
+          input(type="text" name="url" id="url" value=theArticle.url)
       .field
-        input(type="checkbox" name="dark" id="dark" checked=theArticle.dark)
-        label(for="dark") Background image has dark colors
+        .checkbox
+          input(type="checkbox" name="dark" id="dark" checked=theArticle.dark)
+          label(for="dark") Background image has dark colors
       .field
-        label(for="excerpt") Excerpt
-        br
-        textarea(name="excerpt" id="excerpt" rows="10" cols="50") #{theArticle.excerpt}
+        .left
+          label(for="excerpt") Excerpt
+        .right
+          textarea(name="excerpt" id="excerpt" rows="10" cols="50") #{theArticle.excerpt}
       .field
-        label(for="body") Body
-        br
-        textarea(name="body" id="body" rows="10" cols="50") #{theArticle.body}
+        .left
+          label(for="body") Body
+        .right
+          textarea(name="body" id="body" rows="10" cols="50") #{theArticle.body}
       .field
         input(type="submit" value="Update Article")
     form(method="post" action="/delete/" + theArticle._id)
