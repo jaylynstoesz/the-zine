@@ -10,7 +10,11 @@ block content
   for article in allArticles
     .content
       .banner(style="background-image: url(" + article.url + ")")
-        a(href="/article/" + article._id)
-          h5= article.title
+        if article.dark === "on"
+          a(href="/article/" + article._id)
+            h5(style="color: white") #{article.title}
+        else
+          a(href="/article/" + article._id)
+            h5(style="color: black") #{article.title}      
       .tile
         p= article.excerpt

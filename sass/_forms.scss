@@ -10,6 +10,11 @@ form {
     margin: 10px;
   }
 
+  .button {
+    width: 100%;
+    text-align: center;
+  }
+
   .left {
     width: 50%;
     height: auto;
@@ -40,5 +45,9 @@ form {
 
   #dark {
     width: auto;
+  }
+
+  #delete, #submit {
+    width: 20%;
   }
 }

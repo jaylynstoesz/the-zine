@@ -9,9 +9,10 @@ block content
       h3 #{pageTitle}
   .content
     .banner(style="background-image: url(" + theArticle.url + ")")
-      h3= theArticle.title
-    .tile
-      p= theArticle.excerpt
+      if theArticle.dark === "on"
+        h5(style="color: white") #{theArticle.title}
+      else
+        h5(style="color: black") #{theArticle.title}      
     .tile
       p= theArticle.body
     .tile

@@ -9,6 +9,11 @@ block content
       h3 #{pageTitle}
   .content
     h1 Post a new article
+    .errormsg
+      if errors
+        p Please correct the errors below:
+        for each in errors
+          p= each
     form(method="post" action="/new-article")
       .field
         .left
@@ -36,9 +41,5 @@ block content
         .right
           textarea(name="body" id="body" rows="10" cols="50") #{body}
       .field
-        input(type="submit" value="Add Article")
-    div
-      if errors
-        p Please correct the errors below:
-        for each in errors
-          p.errormsg= each
+        .button
+          input(type="submit" name="submit" id="submit" value="Add Article")

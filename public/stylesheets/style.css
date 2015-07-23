@@ -2,7 +2,6 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:400,700);
 @import url(https://fonts.googleapis.com/css?family=Lato:400,900,700italic);
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -66,8 +65,8 @@ body, button {
   font-weight: 400; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Josefin Sans", Normal, 400;
-  padding: 5px; }
+  font-family: "Lato", sans-serif, 400;
+  padding: 10px; }
 
 h1 {
   font-size: 5em; }
@@ -124,9 +123,9 @@ body {
   background-repeat: no-repeat; }
 
 .content, .pageBanner {
-  width: 70%;
-  margin-top: 2.5%;
   margin-bottom: 2.5%;
+  margin-top: 2.5%;
+  width: 85%;
   margin-left: auto;
   margin-right: auto; }
 
@@ -154,6 +153,9 @@ body {
   padding: 10px;
   margin-top: 10px; }
 
+.errormsg {
+  text-align: center; }
+
 form {
   display: inline-block;
   width: 90%;
@@ -163,6 +165,9 @@ form {
     height: auto;
     padding: 10px;
     margin: 10px; }
+  form .button {
+    width: 100%;
+    text-align: center; }
   form .left {
     width: 50%;
     height: auto;
@@ -183,3 +188,5 @@ form {
     text-align: left; }
   form #dark {
     width: auto; }
+  form #delete, form #submit {
+    width: 20%; }

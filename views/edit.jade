@@ -8,7 +8,12 @@ block content
     a(href="/") 
       h3 #{pageTitle}
   .content
-    h1 Edit this article
+    h3 Edit this article
+    .errormsg
+      if errors
+        p Please correct the errors below:
+        for each in errors
+          p= each
     form(method="post" action="/article/" +  theArticle._id)
       .field
         .left
@@ -35,12 +40,9 @@ block content
         .right
           textarea(name="body" id="body" rows="10" cols="50") #{theArticle.body}
       .field
-        input(type="submit" value="Update Article")
+        .button
+          input(type="submit" name="submit" id="submit" value="Update Article")
     form(method="post" action="/delete/" + theArticle._id)
       .field
-        input(type="submit" id="delete" name="delete" value="Delete this article")
-    div
-      if errors
-        p Please correct the errors below:
-        for each in errors
-          p.errormsg= each
+        .button
+          input(type="submit" id="delete" name="delete" value="Delete this article")
