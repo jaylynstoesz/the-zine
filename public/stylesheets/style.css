@@ -126,9 +126,11 @@ body {
   background-size: 100%;
   background-repeat: no-repeat; }
 
+.pageBanner {
+  margin-top: 2.5%; }
+
 .content, .pageBanner {
   margin-bottom: 2.5%;
-  margin-top: 2.5%;
   width: 85%;
   margin-left: auto;
   margin-right: auto; }

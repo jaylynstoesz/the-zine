@@ -62,7 +62,6 @@ router.post('/article/:id', function(req, res, next) {
   var dark = req.body.dark;
   var excerpt = req.body.excerpt;
   var body = req.body.body;
-  body.replace("\n", "****************");
   if ((title && excerpt) && body) {
     collection.update({_id: req.params.id}, {title: title, url: url, dark: dark, excerpt: excerpt, body: body});
     res.redirect('/article/' + req.params.id);
