@@ -1,5 +1,11 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  .nav
+    a(href="/") #{pageTitle}
+  a(href="/new-article") Post a new article
+  for article in allArticles
+    div
+      a(href="/article/" + article._id)
+        h3= article.title
+      p= article.excerpt

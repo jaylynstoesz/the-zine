@@ -1,0 +1,32 @@
+extends layout
+
+block content
+  .nav
+    a(href="/") #{pageTitle}
+  h1 Post a new article
+  a(href="/") Home
+  form(method="post" action="/new-article")
+    .field
+      label(for="title") Title 
+      input(type="text" name="title" id="title" value=title)
+    .field
+      label(for="url") Background Url 
+      input(type="text" name="url" id="url" value=url)
+    .field
+      input(type="checkbox" name="dark" id="dark" value=dark)
+      label(for="dark") Background image has dark colors
+    .field
+      label(for="excerpt") Excerpt
+      br
+      textarea(name="excerpt" id="excerpt" rows="10" cols="50") #{excerpt}
+    .field
+      label(for="body") Body
+      br
+      textarea(name="body" id="body" rows="10" cols="50") #{body}
+    .field
+      input(type="submit" value="Add Article")
+  div
+    if errors
+      p Please correct the errors below:
+      for each in errors
+        p.errormsg= each

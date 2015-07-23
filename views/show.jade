@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  .nav
+    a(href="/") #{pageTitle}
+  h1= theArticle.title
+  p= theArticle.excerpt
+  p= theArticle.body
+  a(href="/article/" + theArticle._id + "/edit") Edit this article
+  
