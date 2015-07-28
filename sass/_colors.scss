@@ -2,9 +2,11 @@ $primary: #461220;
 $secondary: #8C2F39;
 $black: #666;
 $slightlyDarkerBlack: #000;
+$silver: #CCCCCC;
 $tertiary: #FED0BB;
 $white: #FFF;
 $red: #F00;
+$darkRed: #BE2625;
 
 .content, .pageBanner {
   background-color: $white;
@@ -19,10 +21,26 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .errormsg {
-  color: $red;
+  color: $darkRed;
+}
+
+.title {
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  border-bottom: 1px solid $silver;
+}
+
+.button {
+  margin: 0;
 }
 
 #delete {
   background-color: $red;
   color: $white;
+}
+
+#postNew {
+  background-color: $white;
+  color: $black;
 }

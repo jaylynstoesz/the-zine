@@ -56,11 +56,24 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #FFF; }
 
 .errormsg {
-  color: #F00; }
+  color: #BE2625; }
+
+.title {
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  border-bottom: 1px solid #CCCCCC; }
+
+.button {
+  margin: 0; }
 
 #delete {
   background-color: #F00;
   color: #FFF; }
+
+#postNew {
+  background-color: #FFF;
+  color: #666; }
 
 body, button {
   font-family: 'Lato', sans-serif;
@@ -116,6 +129,9 @@ a:hover {
   font-weight: bold;
   text-shadow: 1px 1px 1px black; }
 
+.banner #edit {
+  text-decoration: none; }
+
 strong {
   font-weight: bold; }
 
@@ -125,6 +141,9 @@ em {
 label {
   font-size: 15px; }
 
+#postNew {
+  font-size: 20px; }
+
 body {
   background-image: url(https://raw.githubusercontent.com/gSchool/express-crud-assessment/master/congruent_outline.png?token=ALV2BtnB2ZDwEgv0yjJIK8CYCiVZPaPcks5VunHcwA%3D%3D);
   background-size: 100%;
@@ -133,7 +152,7 @@ body {
 .pageBanner {
   margin-top: 2.5%; }
 
-.content, .pageBanner {
+.content, .pageBanner, .postNew {
   margin-bottom: 2.5%;
   width: 85%;
   margin-left: auto;
@@ -148,15 +167,19 @@ body {
     padding: 10px; }
 
 .pageBanner {
+  margin-top: 0;
   background-image: url(https://unsplash.imgix.net/photo-1429198739803-7db875882052?dpr=2&fit=crop&fm=jpg&h=1575&q=75&w=1050);
   text-align: right; }
 
 .banner {
   height: auto;
+  overflow: auto;
   padding: 5px; }
-  .banner h3 {
+  .banner h5 {
     padding: 5px;
-    margin: 5px; }
+    margin: 5px;
+    display: inline-block;
+    float: left; }
 
 .tile {
   height: auto;
@@ -164,7 +187,28 @@ body {
   margin-top: 10px; }
 
 .errormsg {
-  text-align: center; }
+  margin: 10px;
+  text-align: left;
+  margin-left: 20%; }
+
+.errormsg li {
+  padding-left: 10px; }
+
+#edit {
+  display: inline-block;
+  float: right;
+  padding: 5wpx; }
+
+#postNew {
+  display: inline-block;
+  padding: 20px;
+  border-top-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  width: auto;
+  float: right; }
+
+* {
+  box-sizing: border-box; }
 
 form {
   display: inline-block;
@@ -177,27 +221,36 @@ form {
     margin: 10px; }
   form .button {
     width: 100%;
-    text-align: center; }
+    text-align: left; }
   form .left {
-    width: 50%;
+    width: 20%;
     height: auto;
-    display: inline-block; }
+    display: inline-block;
+    text-align: right;
+    vertical-align: top; }
   form .right {
-    width: 50%;
+    width: 80%;
     height: auto;
     display: inline-block; }
   form label {
     display: inline-block;
-    padding: 10px; }
+    padding-right: 10px;
+    text-align: right; }
   form input, form textarea {
-    width: 80%;
+    width: 75%;
     margin-left: auto;
     margin-right: auto;
     display: inline-block; }
   form .checkbox {
-    text-align: left; }
+    display: inline-block;
+    text-align: left;
+    margin-left: 20%; }
+  form .checkbox label {
+    padding-left: 10px; }
   form #dark {
-    width: auto; }
-  form #delete, form #submit {
     width: auto;
-    padding: 5px; }
+    display: inline-block; }
+  form #delete, form #submit {
+    margin-left: 20%;
+    width: auto;
+    padding: 2px; }

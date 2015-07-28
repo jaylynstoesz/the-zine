@@ -1,9 +1,6 @@
 extends layout
 
 block content
-  .nav
-    a(href="/new-article") Post a new article
-    a(href="/") Home
   .pageBanner
     a(href="/") 
       h3 #{pageTitle}
@@ -16,7 +13,7 @@ block content
               h5(style="color: white") #{article.title}
           else
             a(href="/article/" + article._id)
-              h5(style="color: black") #{article.title}      
+              h5(style="color: black") #{article.title}  
       else
         .banner(style="background-color: silver")
           if article.dark === "on"
@@ -27,3 +24,5 @@ block content
               h5(style="color: black") #{article.title}      
       .tile
         p= article.excerpt
+  .postNew
+    a#postNew(href="/new-article") NEW ARTICLE

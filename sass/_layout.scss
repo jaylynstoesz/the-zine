@@ -8,7 +8,7 @@ body {
   margin-top: 2.5%;
 }
 
-.content, .pageBanner {
+.content, .pageBanner, .postNew {
   margin-bottom: 2.5%;
   width: 85%;
   margin-left: auto;
@@ -26,16 +26,20 @@ body {
 }
 
 .pageBanner {
+  margin-top: 0;
   background-image: url(https://unsplash.imgix.net/photo-1429198739803-7db875882052?dpr=2&fit=crop&fm=jpg&h=1575&q=75&w=1050);
   text-align: right;
 }
 
 .banner {
-  h3 {
+  h5 {
     padding: 5px;
     margin: 5px;
+    display: inline-block;
+    float: left;
   }
   height: auto;
+  overflow: auto;
   padding: 5px;
 }
 
@@ -46,5 +50,26 @@ body {
 }
 
 .errormsg {
-  text-align: center;
+  margin: 10px;
+  text-align: left;
+  margin-left: 20%;
+}
+
+.errormsg li {
+  padding-left: 10px;
+}
+
+#edit {
+  display: inline-block;
+  float: right;
+  padding: 5wpx;
+}
+
+#postNew {
+  display: inline-block;
+  padding: 20px;
+  border-top-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  width:  auto;
+  float: right;
 }

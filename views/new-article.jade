@@ -1,19 +1,18 @@
 extends layout
 
 block content
-  .nav
-    a(href="/new-article") Post a new article
-    a(href="/") Home
   .pageBanner
     a(href="/") 
       h3 #{pageTitle}
   .content
-    h3 Post a new article
+    .title
+      h4 Post a new article
     .errormsg
       if errors
-        p Please correct the errors below:
+        ul Please correct the errors below:
+        br
         for each in errors
-          p= each
+          li= each
     form(method="post" action="/new-article")
       .field
         .left
@@ -27,9 +26,8 @@ block content
           input(type="text" name="url" id="url" value=url)
       .field
         .checkbox
-          .left
-            input(type="checkbox" name="dark" id="dark" value=dark)
-            label(for="dark") Background image has dark colors
+          input(type="checkbox" name="dark" id="dark" value=dark)
+          label(for="dark") Background image has dark colors
       .field
         .left
           label(for="excerpt") Excerpt

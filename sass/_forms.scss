@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 form {
   display: inline-block;
   width: 90%;
@@ -12,43 +16,54 @@ form {
 
   .button {
     width: 100%;
-    text-align: center;
+    text-align: left;
   }
 
   .left {
-    width: 50%;
+    width: 20%;
     height: auto;
     display: inline-block;
+    text-align: right;
+    vertical-align: top;
   }
 
   .right {
-    width: 50%;
+    width: 80%;
     height: auto;
     display: inline-block;
   }
 
   label {
     display: inline-block;
-    padding: 10px;
+    padding-right: 10px;
+    text-align: right;
   }
 
   input, textarea {
-    width: 80%;
+    width: 75%;
     margin-left: auto;
     margin-right: auto;
     display: inline-block;
   }
 
   .checkbox {
+    display: inline-block;
     text-align: left;
+    margin-left: 20%;
+  }
+
+  .checkbox label {
+    padding-left: 10px;
   }
 
   #dark {
     width: auto;
+    display: inline-block;
   }
 
   #delete, #submit {
+    margin-left: 20%;
     width: auto;
-    padding: 5px;
+    padding: 2px;
   }
 }

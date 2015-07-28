@@ -65,6 +65,10 @@ a:hover {
   text-shadow: 1px 1px 1px black;
 }
 
+.banner #edit {
+  text-decoration: none;
+}
+
 strong {
   font-weight: bold;
 }
@@ -75,4 +79,8 @@ em {
 
 label {
   font-size: 15px;
+}
+
+#postNew {
+  font-size: 20px;
 }

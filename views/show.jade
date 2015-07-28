@@ -1,9 +1,6 @@
 extends layout
 
 block content
-  .nav
-    a(href="/new-article") Post a new article
-    a(href="/") Home
   .pageBanner
     a(href="/") 
       h3 #{pageTitle}
@@ -12,17 +9,23 @@ block content
       .banner(style="background-image: url(" + theArticle.url + ")")
         if theArticle.dark === "on"
           h5(style="color: white") #{theArticle.title}
+          a#edit(href="/article/" + theArticle._id + "/edit")
+            h5(style="color: white") Edit
         else
           h5(style="color: black") #{theArticle.title}
+          a#edit(href="/article/" + theArticle._id + "/edit")
+            h5 Edit
     else
       .banner(style="background-color: silver")
         if theArticle.dark === "on"
           h5(style="color: white") #{theArticle.title}
+          a#edit(href="/article/" + theArticle._id + "/edit")
+            h5(style="color: white") Edit
         else
           h5(style="color: black") #{theArticle.title}
+          a#edit(href="/article/" + theArticle._id + "/edit")
+            h5 Edit
     .tile
       p= theArticle.body
-    .tile
-      a(href="/article/" + theArticle._id + "/edit") Edit this article
 
     

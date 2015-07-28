@@ -1,19 +1,18 @@
 extends layout
 
 block content
-  .nav
-    a(href="/new-article") Post a new article
-    a(href="/") Home
   .pageBanner
     a(href="/") 
       h3 #{pageTitle}
   .content
-    h3 Edit this article
+    .title
+      h4 Edit this article
     .errormsg
       if errors
-        p Please correct the errors below:
+        ul Please correct the errors below:
+        br
         for each in errors
-          p= each
+          li= each
     form(method="post" action="/article/" +  theArticle._id)
       .field
         .left
@@ -42,7 +41,7 @@ block content
       .field
         .button
           input(type="submit" name="submit" id="submit" value="Update Article")
-    form(method="post" action="/delete/" + theArticle._id)
+    form(id="deleteForm" method="post" action="/delete/" + theArticle._id)
       .field
         .button
-          input(type="submit" id="delete" name="delete" value="Delete this article")
+          input(type="submit" id="delete" name="delete" value="Delete")
